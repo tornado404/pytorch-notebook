@@ -35,7 +35,7 @@ jobs:
             file: ./Dockerfile
             push: true
             platforms: ${{ env.PLATFORMS }}
-            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pytorch-notebook:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/pytorch-notebook:latest
 
         - name: Image digest
           run: echo ${{ steps.docker_build.outputs.digest }}
